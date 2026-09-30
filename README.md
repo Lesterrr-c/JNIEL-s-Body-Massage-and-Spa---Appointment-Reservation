@@ -21,3 +21,6 @@ A PHP and MySQL-based web application for managing spa appointments, customers, 
 - Customer management
 - Email OTP verification
 - Appointment reminders
+
+## Project Status
+-Currently under development
