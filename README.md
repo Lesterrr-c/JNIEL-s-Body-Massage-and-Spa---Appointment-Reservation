@@ -24,3 +24,7 @@ A PHP and MySQL-based web application for managing spa appointments, customers, 
 
 ## Project Status
 -Currently under development
+
+## Personal Details
+-Lhyte Myers
+-21 years of age
