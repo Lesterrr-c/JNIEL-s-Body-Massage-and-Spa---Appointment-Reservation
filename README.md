@@ -28,3 +28,6 @@ A PHP and MySQL-based web application for managing spa appointments, customers, 
 ## Personal Details
 -Lhyte Myers
 -21 years of age
+
+## Branch Practice
+-just a fucking test bruh
