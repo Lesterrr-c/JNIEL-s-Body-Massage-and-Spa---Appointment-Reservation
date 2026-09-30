@@ -1,0 +1,26 @@
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Private SMTP configuration
+config/smtp.php
+db.php

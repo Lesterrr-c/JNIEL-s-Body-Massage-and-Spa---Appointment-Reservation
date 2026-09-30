@@ -1,0 +1,2151 @@
+/* Reset some default browser styles */
+/* general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --green-dark: #486b52;
+    --green: #668b70;
+    --green-light: #e9f0e9;
+    --gold: #b7954d;
+    --gold-light: #f4ecd9;
+    --cream: #fafbf8;
+    --white: #ffffff;
+    --text-dark: #29332c;
+    --text: #59645d;
+    --text-light: #89918b;
+    --border: #e6ebe5;
+    --shadow: 0 10px 30px rgba(56, 61, 0.07);
+    --radius: 16px;
+}   
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f7f2;
+    color: #26352d;
+    background:url("../images/logo/hero.jpg")center center/cover no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+.header{
+    width: 100%;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: transparent;
+    border-bottom: 1px solid rgba(54, 77, 63, 0.10);
+    top: 0;
+    z-index: 999;
+    position: sticky;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);    
+}
+
+.header nav a {
+    color: #fcfbfb;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img{
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo h2{
+    color: #294b3a;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+
+.logo span{
+
+    display: block;
+
+    color: #7a6647;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 1.2px;
+
+    margin-top: 2px;
+}
+
+
+
+/* Navigation */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav ul li a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav ul li a:hover{
+    color: #2e7d32;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    background: var(--green-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow:0 8px 20px rgba(72, 107, 82, .18);
+    transition: .25s ease;
+}
+
+.header-buttons a:hover {
+   background: #3c5c45;
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 25px rgba(72, 107, 82, .22);
+}
+
+/* Hero Section */
+.hero{
+    text-align: center;
+    padding: 100px 20px;
+    min-height: calc(100vh - 125px);
+    margin-bottom: 0;
+    background:url("../images/logo/hero.jpg")center center/cover no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.hero-overlay{
+    min-height: calc(100vh - 125px);
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.55);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 18px;
+}
+
+.hero-overlay::before {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 14px;
+    }
+
+.hero-overlay h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    width: 700px;
+    max-width: 90%;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 20px;
+    background: var(--green-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow:0 8px 20px rgba(72, 107, 82, .18);
+    transition: .25s ease;
+}
+
+.hero-button:hover {
+    background: #3c5c45;
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 25px rgba(72, 107, 82, .22);
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 420px) {
+
+    .logo span {
+        display: none;
+    }
+
+
+    nav ul {
+        gap: 13px;
+    }
+
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+
+    .hero-overlay h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-overlay p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+    width: 100%;
+
+    padding: 110px 7%;
+
+    background: #f8f7f2;
+}
+
+
+.about-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image {
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+    max-width: 520px;
+}
+
+
+.about-label {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #8b744c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.about-content h2 {
+    margin: 0;
+
+    color: #294b3a;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+.about-line {
+    width: 48px;
+
+    height: 2px;
+
+    margin: 24px 0;
+
+    background: #a58a5b;
+}
+
+
+.about-content p {
+    margin-bottom: 17px;
+
+    color: #667169;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ABOUT BUTTON
+========================================================= */
+
+.about-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 12px;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    background: #315c46;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.about-button:hover {
+    background: #254b39;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        padding: 75px 6%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-image {
+        height: 360px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .about-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-section {
+    width: 100%;
+
+    padding: 110px 7%;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICES HEADING
+========================================================= */
+
+.services-heading {
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.services-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #8b744c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.services-heading h2 {
+    margin: 0 0 20px;
+
+    color: #294b3a;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+.services-heading p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #6c756e;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 30px;
+
+    background: #f8f7f2;
+
+    border: 1px solid rgba(49, 92, 70, 0.08);
+
+    border-radius: 4px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(49, 92, 70, 0.18);
+
+    box-shadow:
+        0 15px 35px rgba(40, 65, 50, 0.08);
+}
+
+
+/* =========================================================
+   SERVICE NUMBER
+========================================================= */
+
+.service-number {
+    margin-bottom: 35px;
+
+    color: #a58a5b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
+
+.service-card-content h3 {
+    margin: 0 0 12px;
+
+    color: #294b3a;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+}
+
+
+.service-card-content p {
+    min-height: 48px;
+
+    margin: 0;
+
+    color: #707971;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SERVICE BOTTOM
+========================================================= */
+
+.service-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(50, 70, 58, 0.10);
+}
+
+
+.service-price {
+    color: #315c46;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.service-book {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #806b4a;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: gap 0.25s ease;
+}
+
+
+.service-book:hover {
+    gap: 11px;
+
+    color: #315c46;
+}
+
+
+/* =========================================================
+   SERVICES FOOTER
+========================================================= */
+
+.services-footer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+
+.services-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    border: 1px solid #315c46;
+
+    border-radius: 5px;
+
+    color: #315c46;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.services-button:hover {
+    background: #315c46;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   NO SERVICES
+========================================================= */
+
+.services-empty {
+    grid-column: 1 / -1;
+
+    padding: 50px;
+
+    text-align: center;
+
+    color: #737c75;
+
+    background: #f8f7f2;
+
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-section {
+        padding: 75px 6%;
+    }
+
+    .services-heading {
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .service-card {
+        min-height: 240px;
+
+        padding: 25px;
+    }
+
+    .service-card-content h3 {
+        font-size: 22px;
+    }
+
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    width: 100%;
+
+    padding: 110px 7%;
+
+    background: #f8f7f2;
+}
+
+
+.contact-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info {
+    max-width: 560px;
+}
+
+
+.contact-label {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #8b744c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.contact-info h2 {
+    margin: 0;
+
+    color: #294b3a;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px, 4vw, 56px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+}
+
+
+.contact-line {
+    width: 48px;
+
+    height: 2px;
+
+    margin: 24px 0;
+
+    background: #a58a5b;
+}
+
+
+.contact-intro {
+    max-width: 500px;
+
+    margin-bottom: 38px;
+
+    color: #69736c;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT ITEMS
+========================================================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(49, 92, 70, 0.15);
+
+    border-radius: 50%;
+
+    color: #315c46;
+
+    font-size: 17px;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+.contact-item span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8b744c;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.contact-item p {
+    margin: 0;
+
+    color: #35463c;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+    padding: 55px 48px;
+
+    background: #315c46;
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 18px 45px rgba(40, 70, 52, 0.12);
+}
+
+
+.contact-card-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d9c28d;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+}
+
+
+.contact-card h3 {
+    margin: 0 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+.contact-card p {
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.contact-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+
+.contact-button:hover {
+    background: #ffffff;
+
+    color: #315c46;
+
+    gap: 14px;
+}
+
+/* =========================================================
+   CONTACT — MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        padding: 75px 6%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .contact-info {
+        max-width: 100%;
+    }
+
+    .contact-card {
+        padding: 40px 30px;
+    }
+
+    .contact-card h3 {
+        font-size: 32px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    background: #243a2f;
+
+    color: #ffffff;
+
+    padding: 70px 7% 0;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 300px;
+}
+
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-logo img {
+    width: 52px;
+
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+
+.footer-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #d7c18c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+}
+
+
+.footer-brand > p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-column h3 {
+    margin: 5px 0 22px;
+
+    color: #d7c18c;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+}
+
+
+.footer-column a {
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER CONTACT
+========================================================= */
+
+.footer-contact p {
+    margin: 0 0 14px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER.php
+========================================================= */
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+}
+
+
+.footer-tagline {
+    color: #d7c18c !important;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   FOOTER — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER - RESPONSIVE
+========================================================= */
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 55px 7% 0;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}
+
+/*==============================
+  CUSTOMER LOGIN
+==============================*/
+
+.login-page{
+    display:flex;
+    min-height:100vh;
+}
+
+.login-left{
+    flex:1;
+    background:url("../images/login-bg.jpg") center center/cover no-repeat;
+    position:relative;
+}
+
+.login-left .overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+    text-align:center;
+    padding:40px;
+}
+
+.login-left h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.login-left p{
+    max-width:500px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.login-right{
+    width:450px;
+    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.login-card{
+    width:100%;
+}
+
+.login-logo{
+    width:90px;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.login-card h2{
+    text-align:center;
+    color:#2E8B57;
+    margin-bottom:25px;
+}
+
+.login-card .input-group{
+    margin-bottom:18px;
+}
+
+.login-card input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.login-card input:focus{
+    outline:none;
+    border-color:#2E8B57;
+}
+
+.login-btn{
+    width:100%;
+    padding:15px;
+    background:#2E8B57;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#256f47;
+}
+
+.message{
+    background:#ffeaea;
+    color:#d32f2f;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.back-home{
+    text-align:center;
+    margin-top:15px;
+}
+
+.back-home a{
+    text-decoration:none;
+    color:#2E8B57;
+    font-weight:600;
+}
+
+
+/* ==========================
+   REGISTER PAGE (register.php)
+========================== */
+.register-page {
+    min-height: 100vh;
+    background: radial-gradient(circle at the top left,  rgba(188, 207, 174, 0.35),transparent 35%), linear-gradient(135deg,#f7f5ed 0%,#eef3e9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*main card*/
+.register-wrapper {
+    width: 100%;
+    max-width: 1050px;
+}
+
+.register-card {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(57, 82, 59, 0.15);
+    min-height: 650px;
+}
+
+/*left brand*/
+.register-brand {
+    position: relative;
+    background: linear-gradient(145deg,#496b55 0%, #66866a 55%, #819879 100%);
+    color: white;
+    padding: 55px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*decorative circle*/
+.register-brand::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    top: -120px;
+    right: -100px;
+}
+
+.register-brand::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(213, 174, 86, 0.12);
+
+    bottom: -100px;
+    left: -80px;
+}
+
+
+/* Logo */
+
+.brand-logo {
+    position: relative;
+    z-index: 2;
+
+    width: 90px;
+    height: 90px;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+}
+
+.brand-logo img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+}
+
+
+/* Brand name */
+
+.register-brand h1 {
+    position: relative;
+    z-index: 2;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 4px;
+
+    color: #f4d48a;
+}
+
+.register-brand > span {
+    position: relative;
+    z-index: 2;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    color: #f4f4eb;
+}
+
+
+/* Gold separator */
+
+.brand-line {
+    position: relative;
+    z-index: 2;
+
+    width: 65px;
+    height: 3px;
+
+    background: #d9b765;
+
+    margin: 25px 0;
+}
+
+
+/* Tagline */
+
+.register-brand h3 {
+    position: relative;
+    z-index: 2;
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    line-height: 1.3;
+
+    margin-bottom: 18px;
+
+    color: white;
+}
+
+.register-brand > p {
+    position: relative;
+    z-index: 2;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.85);
+
+    max-width: 360px;
+}
+
+
+/* Brand information */
+
+.brand-info {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.brand-info div {
+    font-size: 14px;
+
+    color: rgba(255,255,255,0.9);
+}
+
+.brand-info strong {
+    color: #e2c276;
+
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   FORM SIDE
+========================================================= */
+
+.register-form-area {
+    padding: 50px 65px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Heading */
+
+.form-heading {
+    margin-bottom: 25px;
+}
+
+.form-small-title {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #b7954d;
+}
+
+.form-heading h2 {
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    color: #3f604a;
+}
+
+.form-heading p {
+    color: #7a8078;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.register-message {
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.register-message.error {
+    background: #fff2f0;
+
+    color: #a64b42;
+
+    border: 1px solid #f0c7c2;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.register-form-area .input-group {
+    margin-bottom: 17px;
+}
+
+.register-form-area .input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #46534a;
+}
+
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.input-icon {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7b9a7e;
+
+    font-size: 15px;
+
+    z-index: 2;
+}
+
+
+.register-form-area .input-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px 0 43px;
+
+    border: 1px solid #dfe5dc;
+
+    border-radius: 9px;
+
+    background: #fafbf9;
+
+    color: #354139;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.register-form-area .input-group input::placeholder {
+    color: #adb5ae;
+}
+
+
+.register-form-area .input-group input:focus {
+    border-color: #789879;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(120, 152, 121, 0.12);
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-submit {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #52765a,
+            #789879
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 7px 18px rgba(82,118,90,0.2);
+}
+
+
+.register-submit span {
+    margin-left: 8px;
+
+    font-size: 18px;
+
+    transition: 0.25s;
+}
+
+
+.register-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(82,118,90,0.28);
+}
+
+
+.register-submit:hover span {
+    margin-left: 13px;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.register-form-area .login-link {
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: #7b827c;
+
+    font-size: 13px;
+}
+
+
+.register-form-area .login-link a {
+    color: #52765a;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    margin-left: 4px;
+}
+
+
+.register-form-area .login-link a:hover {
+    color: #b7954d;
+
+    text-decoration: underline;
+}
+
+
+/* Security note */
+
+.secure-note {
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #a1a8a2;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .register-page {
+        padding: 25px 15px;
+    }
+
+    .register-card {
+        grid-template-columns: 1fr;
+    }
+
+    .register-brand {
+        padding: 40px 30px;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+    .register-brand h1 {
+        font-size: 32px;
+    }
+
+    .register-brand h3 {
+        font-size: 23px;
+    }
+
+    .register-brand > p {
+        max-width: 500px;
+    }
+
+    .brand-line {
+        margin: 20px auto;
+    }
+
+    .brand-info {
+        text-align: left;
+    }
+
+    .register-form-area {
+        padding: 40px 30px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .register-form-area {
+        padding: 35px 22px;
+    }
+
+    .register-brand {
+        padding: 35px 25px;
+    }
+
+    .form-heading h2 {
+        font-size: 27px;
+    }
+
+}
+
+/* ==========================
+   BACK TO HOME
+========================== */
+
+ .back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    margin-bottom: 25px;
+    color: #71816f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.back-home span {
+    font-size: 18px;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.back-home:hover {
+    color: #b7954d;
+}
+
+.back-home:hover span {
+    transform: translateX(-4px);
+}
+
+
+
+/**/
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f7f6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.register-box{
+    width: 450px;
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.register-box h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2E8B57;
+}
+
+.register-box p{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.register-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.register-message.error {
+    background: #ffe5e5;
+    color: #b00020;
+    border: 1px solid #ffb3b3;
+}
+
+.input-group{
+    margin-bottom: 18px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.input-group input:focus{
+    border-color: #2E8B57;
+}
+
+.btn{
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2E8B57;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #256f47;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a{
+    color: #2E8B57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover{
+    text-decoration: underline;
+}
+
+.login-btn {
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.input-group select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+}
